@@ -27,9 +27,7 @@ public class TicketManager {
         for (TicketInformation item : items) {
             if (from.equals(item.getHere())) {
                 if (to.equals(item.getThere())) {
-
                     // "добавляем в конец" массива result продукт product
-
                     int length = result.length + 1;
                     TicketInformation[] tmp = new TicketInformation[length];
                     // itar+tab
@@ -41,11 +39,11 @@ public class TicketManager {
                     // закладываем последним наш элемент
                     int lastIndex = tmp.length - 1;
                     tmp[lastIndex] = item;
-                    Arrays.sort(tmp);
                     result = tmp;
                 }
             }
         }
+        Arrays.sort(result);
         return result;
     }
 
